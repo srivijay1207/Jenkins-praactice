@@ -4,7 +4,7 @@ agent { node { label 'agent2' } }
     stages {
         stage('Build') { 
             steps {
-                echo "building"
+                echo "building project"
             }
         }
         stage('Test') { 
