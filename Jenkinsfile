@@ -4,17 +4,23 @@ agent { node { label 'agent2' } }
     stages {
         stage('init') { 
             steps {
-                sh terraform init
+                sh ...
+                 terraform init
+                 ...
             }
         }
         stage('plan') { 
             steps {
-                sh terraform plan
+                sh ...
+                 terraform plan
+                 ...
             }
         }
         stage('Deploy') { 
             steps {
-                sh terraform apply -auto-approve 
+                sh ...
+                terraform apply -auto-approve 
+                ...
             }
         }
     }
