@@ -9,7 +9,7 @@ agent { node { label 'agent2' } }
         }
         stage('Test') { 
             steps {
-                echo "testing" 
+                echo "testing the pro" 
             }
         }
         stage('Deploy') { 
