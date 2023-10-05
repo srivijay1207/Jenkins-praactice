@@ -4,17 +4,17 @@ agent { node { label 'agent2' } }
     stages {
         stage('Build') { 
             steps {
-                echo "building project"
+                sh "terraform init"
             }
         }
         stage('Test') { 
             steps {
-                echo "testing the pro" 
+                sh "terraform plan" 
             }
         }
         stage('Deploy') { 
             steps {
-                echo "building" 
+                echo "apply -auto-approve" 
             }
         }
     }
