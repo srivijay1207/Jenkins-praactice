@@ -5,18 +5,18 @@ agent { node { label 'agent2' } }
         stage('init') { 
             steps {
                  sh'''
-                 ls -ltr
-                 pwd
-                 terraform init
+                    ls -ltr
+                    pwd
+                    terraform init
                  '''
             }
         }
         stage('plan') { 
             steps {
                  sh '''
-                 ls -ltr
-                 pwd
-                 terraform plan
+                    ls -ltr
+                    pwd
+                    terraform plan
                  '''
             }
         }
