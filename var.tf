@@ -5,10 +5,10 @@ variable "instance_type" {
   default = "t2.micro"
 }
 
-variable "cidr_block" {
-    type = list
-    default = ["0.0.0.0/0"]
-}
-variable "sg_group" {
-  default = "allow_tls"
-}
+# variable "cidr_block" {
+#     type = list
+#     default = ["0.0.0.0/0"]
+# }
+# variable "sg_group" {
+#   default = "allow_tls"
+# }
