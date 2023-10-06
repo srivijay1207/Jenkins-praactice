@@ -2,26 +2,31 @@ pipeline {
     
 agent { node { label 'agent2' } }
     stages {
-        stage(“terraform init”) { 
+        stage('init') { 
             steps {
-                 sh ...
+                 sh'''
+                 ls -ltr
+                 pwd
                  terraform init
-                 ...
+                 '''
             }
         }
-        stage(“terraform plan”) { 
+        stage('plan') { 
             steps {
-                 sh ...
+                 sh '''
+                 ls -ltr
+                 pwd
                  terraform plan
-                 ...
+                 '''
             }
         }
 //         stage('Deploy') { 
 //             steps {
-//                 sh ...
+//                 sh'''
 //                 terraform apply -auto-approve 
-//                 ...
+//                 '''
 //             }
 //         }
 //     }
-// }
+}
+}
