@@ -1,6 +1,6 @@
 pipeline {
     
-agent { node { label 'agent2' } }
+    agent any 
     stages {
         stage('init') { 
             steps {
