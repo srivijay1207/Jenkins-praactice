@@ -1,6 +1,6 @@
 pipeline {
     
-agent { node { label 'agent2' } }
+    agent any 
     stages {
         stage('init') { 
             steps {
@@ -30,4 +30,7 @@ agent { node { label 'agent2' } }
 //     }
 }
 }
+<<<<<<< HEAD
 //poll scm (testing)
+=======
+>>>>>>> a2bd7be20d0d8267adf1064254785aaa66c251b0
