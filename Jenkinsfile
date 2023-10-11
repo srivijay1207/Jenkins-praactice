@@ -1,57 +1,15 @@
 pipeline {
-    agent any
-    // options {
-    //     ansiColor('xterm')
-    // }
-
+    agent none
     stages {
-        stage('Init') {
+        stage('Example') {
+            agent any
+            options {
+                // Timeout counter starts BEFORE agent is allocated
+                timeout(time: 1, unit: 'SECONDS')
+            }
             steps {
-                sh'''
-                    ls -ltr
-                    pwd
-                    terraform init -reconfigure
-                '''
+                echo 'Hello World'
             }
-        }
-        stage('Plan') {
-            steps {
-                sh'''
-                    
-                    ls -ltr
-                    pwd
-                    terraform plan
-                '''
-            }
-        }
-        stage('Approve') {
-            steps{
-                input "Shall I apply?"
-            }
-        }
-
-        stage('Apply') {
-            steps{
-                
-                sh '''
-                    
-                    ls -ltr
-                    pwd
-                    terraform apply -auto-approve
-                '''
-            }
-        }
-    }
-
-    post { 
-        always { 
-            echo 'I will always run whether job is success or not'
-        }
-        success{
-            echo 'I will run only when job is success'
-        }
-        failure{
-            echo 'I will run when failure'
         }
     }
 }
