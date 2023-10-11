@@ -1,9 +1,14 @@
 pipeline {
+<<<<<<< HEAD
     agent any
     options {
         ansiColor('xterm')
     }
 
+=======
+    
+    agent any 
+>>>>>>> 174d164bf044f6cb564a0d12b62104aeacfbc6b1
     stages {
         stage('Init') {
             steps {
@@ -24,6 +29,7 @@ pipeline {
                 '''
             }
         }
+<<<<<<< HEAD
         stage('Approve') {
             steps{
                 input "Shall I apply?"
@@ -55,3 +61,15 @@ pipeline {
         }
     }
 }
+=======
+//         stage('Deploy') { 
+//             steps {
+//                 sh'''
+//                 terraform apply -auto-approve 
+//                 '''
+//             }
+//         }
+//     }
+    }
+}
+>>>>>>> 174d164bf044f6cb564a0d12b62104aeacfbc6b1
